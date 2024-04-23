@@ -33,7 +33,7 @@ export default async function handler(
 
     const notificationContent = `[XND SHOP] has a new order for ${randomItemCount} items totaling $${randomTotalAmount.toFixed(2)}.`;
 
-    await sendNotification(req.body.userId, notificationContent, i * 5000); // Delay each notification by 5 seconds
+    await sendNotification(req.body.userId, notificationContent, i * 3500); // Delay each notification by 5 seconds
   }
 
   res.status(200).json({ status: "success" });
